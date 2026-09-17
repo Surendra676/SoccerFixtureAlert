@@ -4,7 +4,7 @@ on:
   schedule:
     # 11:56 UTC = 6:56 AM CDT (Summer / Fall)
     # Change to "0 12 * * *" when Standard Time (CST) resumes in November
-    - cron: "56 11 * * *"
+    - cron: "0 12 * * *"
   workflow_dispatch:
 
 jobs:
