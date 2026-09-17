@@ -13,7 +13,7 @@ LEAGUES = "PL,PD,SA,BL1,FL1,CL"
 LOCAL = ZoneInfo("America/Chicago")
 
 LEAGUE_EMOJI = {
-    "Premier League": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    "Premier League": "🇬🇧",
     "Primera Division": "🇪🇸",
     "Serie A": "🇮🇹",
     "Bundesliga": "🇩🇪",
@@ -54,7 +54,7 @@ if count == 0:
 else:
     lines = []
     for league in sorted(by_league):
-        lines.append(f"{LEAGUE_EMOJI.get(league, '')} {league}")
+        lines.append(f"{LEAGUE_EMOJI.get(league, '⚽')} {league}")
         for g in sorted(by_league[league], key=lambda x: x["time"]):
             t = g["time"].strftime("%I:%M %p").lstrip("0")
             lines.append(f"  {t}  {g['home']} vs {g['away']}")
