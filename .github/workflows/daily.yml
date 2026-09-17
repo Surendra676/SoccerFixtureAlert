@@ -2,8 +2,9 @@ name: Daily fixtures
 
 on:
   schedule:
-    - cron: "51 6 * * *"
-      timezone: America/Chicago
+    # 11:56 UTC = 6:56 AM CDT (Summer / Fall)
+    # Change to "56 12 * * *" when Standard Time (CST) resumes in November
+    - cron: "56 11 * * *"
   workflow_dispatch:
 
 jobs:
@@ -15,6 +16,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: "pip"
 
       - run: pip install -r requirements.txt
 
