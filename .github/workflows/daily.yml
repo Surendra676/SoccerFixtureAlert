@@ -2,7 +2,7 @@ name: Daily fixtures
 
 on:
   schedule:
-    - cron: "0 6 * * *"
+    - cron: "42 3 * * *"
       timezone: America/Chicago
   workflow_dispatch:
 
