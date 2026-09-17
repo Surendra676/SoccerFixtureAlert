@@ -2,9 +2,8 @@ name: Daily fixtures
 
 on:
   schedule:
-    # 11:56 UTC = 6:56 AM CDT (Summer / Fall)
-    # Change to "0 12 * * *" when Standard Time (CST) resumes in November
-    - cron: "0 12 * * *"
+    - cron: "0 6 * * *"
+      timezone: America/Chicago
   workflow_dispatch:
 
 jobs:
@@ -24,3 +23,5 @@ jobs:
         env:
           FOOTBALL_DATA_KEY: ${{ secrets.FOOTBALL_DATA_KEY }}
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+
+
